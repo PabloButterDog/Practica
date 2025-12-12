@@ -1,0 +1,29 @@
+{
+  "info": {
+    "name": "mi-primer-servicio-validation",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Validar - passportId",
+      "request": {
+        "method": "GET",
+        "url": {"raw":"http://localhost:8080/api/validar?passportId=ABC1234","protocol":"http","host":["localhost"],"port":"8080","path":["api","validar"],"query":[{"key":"passportId","value":"ABC1234"}]}
+      }
+    },
+    {
+      "name": "Validar - email",
+      "request": {
+        "method": "GET",
+        "url": {"raw":"http://localhost:8080/api/validar?email=test%40example.com","protocol":"http","host":["localhost"],"port":"8080","path":["api","validar"],"query":[{"key":"email","value":"test@example.com"}]}
+      }
+    },
+    {
+      "name": "Validar - phone",
+      "request": {
+        "method": "GET",
+        "url": {"raw":"http://localhost:8080/api/validar?phone=+34123456789","protocol":"http","host":["localhost"],"port":"8080","path":["api","validar"],"query":[{"key":"phone","value":"+34123456789"}]}
+      }
+    }
+  ]
+}
