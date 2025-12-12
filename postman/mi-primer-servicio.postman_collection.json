@@ -1,0 +1,79 @@
+{
+  "info": {
+    "name": "mi-primer-servicio",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Item",
+      "request": {
+        "method": "POST",
+        "header": [{"key":"Content-Type","value":"application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"item1\",\n  \"value\": \"value1\"\n}"
+        },
+        "url": {"raw": "http://localhost:8080/api/service/items","protocol":"http","host":["localhost"],"port":"8080","path":["api","service","items"]}
+      }
+    },
+    {
+      "name": "Get Item",
+      "request": {
+        "method": "GET",
+        "url": {"raw": "http://localhost:8080/api/service/items/1","protocol":"http","host":["localhost"],"port":"8080","path":["api","service","items","1"]}
+      }
+    
+    },
+    {
+      "name": "Validar - phone",
+      "request": {
+        "method": "GET",
+        "url": {"raw":"http://localhost:8080/api/validar?phone=+34123456789","protocol":"http","host":["localhost"],"port":"8080","path":["api","validar"],"query":[{"key":"phone","value":"+34123456789"}]}
+      }
+    }
+    ,
+    {
+      "name": "Create Customer",
+      "request": {
+        "method": "POST",
+        "header": [{"key":"Content-Type","value":"application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Juan\",\n  \"email\": \"juan@example.com\"\n}"
+        },
+        "url": {"raw": "http://localhost:8080/api/customers","protocol":"http","host":["localhost"],"port":"8080","path":["api","customers"]}
+      }
+    },
+    {
+      "name": "Get Customer by ID",
+      "request": {
+        "method": "GET",
+        "url": {"raw": "http://localhost:8080/api/customers/tolai/1","protocol":"http","host":["localhost"],"port":"8080","path":["api","customers","tolai","1"]}
+      }
+    },
+    {
+      "name": "Get Customer by Email",
+      "request": {
+        "method": "GET",
+        "url": {"raw": "http://localhost:8080/api/customers?email=juan%40example.com","protocol":"http","host":["localhost"],"port":"8080","path":["api","customers"],"query":[{"key":"email","value":"juan@example.com"}]}
+      }
+    },
+    {
+      "name": "Update Customer",
+      "request": {
+        "method": "PUT",
+        "header": [{"key":"Content-Type","value":"application/json"}],
+        "body": {"mode":"raw","raw":"{\n  \"name\": \"Juanito\",\n  \"email\": \"juanito@example.com\"\n}"},
+        "url": {"raw":"http://localhost:8080/api/customers/1","protocol":"http","host":["localhost"],"port":"8080","path":["api","customers","1"]}
+      }
+    },
+    {
+      "name": "Delete Customer",
+      "request": {
+        "method": "DELETE",
+        "url": {"raw":"http://localhost:8080/api/customers/1","protocol":"http","host":["localhost"],"port":"8080","path":["api","customers","1"]}
+      }
+    }
+  ]
+}
+    
